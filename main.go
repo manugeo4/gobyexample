@@ -1,21 +1,32 @@
 package main
 
-import (
-    "fmt"
-    "math"
-)
-
-const s string = "constant"
+import "fmt"
 
 func main() {
-    fmt.Println(s)
 
-    const n = 500000000
+    i := 1
+    for i <= 3 {
+        fmt.Println(i)
+        i = i + 1
+    }
 
-    const d = 3e20 / n
-    fmt.Println(d)
+    for j := 0; j < 3; j++ {
+        fmt.Println(j)
+    }
 
-    fmt.Println(int64(d))
+    for i := range 3 {
+        fmt.Println("range", i)
+    }
 
-    fmt.Println(math.Sin(n))
+    for {
+        fmt.Println("loop")
+        break
+    }
+
+    for n := range 6 {
+        if n%2 == 0 {
+            continue
+        }
+        fmt.Println(n)
+    }
 }
